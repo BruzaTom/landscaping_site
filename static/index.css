@@ -1,0 +1,370 @@
+body {
+  background-color: #f9f6f1; /* bone white */
+  color: #2c2c2c;            /* soft charcoal for contrast */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+  line-height: 1.5;
+  margin: 0;
+  padding: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-image: url('images/texas.webp');
+  /*background-size: cover; /* Makes the image cover the entire element */
+  background-size: auto; /* Makes the image cover the entire element */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-position: center; /* Centers the image */
+  background-attachment: fixed; /* Keeps the image fixed in place */
+}
+.bgimage {
+  background-image: url('images/texas.jpg');
+  background-size: cover; /* Makes the image cover the entire element */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-position: center; /* Centers the image */
+  background-attachment: fixed; /* Keeps the image fixed in place */
+}
+
+article{
+  background-color: #0d1117d1;
+  border-radius: 50px;
+}
+
+div{
+  padding: 10px;
+}
+
+
+/* icon list*/
+.icon-list {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+
+.icon-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 60px;
+}
+
+.icon-list img {
+  box-shadow: none;
+  border: none;
+}
+
+
+b {
+  font-weight: 900;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  background: transparent;
+    color: #fff; /* Ensure text color contrasts well with background */
+  font-family: 'Lucida Console', 'Lucida Sans Typewriter', Monaco,
+    'Bitstream Vera Sans Mono', monospace;
+  color: #F28500;
+  margin-top: 24px;
+  margin-bottom: 16px;
+  text-align: center;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+
+/*  text-shadow: 1px 1px 2px rgb(84, 166, 102), 0 0 5px rgb(63, 115, 86),
+    0 0 5px rgb(12, 12, 12); */
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.17em;
+}
+
+h4,
+h5,
+h6 {
+  font-size: 1em;
+}
+
+a {
+  color: #58a6ff;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+
+a::before {
+  /* on hover for links */
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #00080c;
+  z-index: -1;
+  transition: transform 0.3s ease;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  border-radius: 50px;
+}
+
+a:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  border-radius: 50px;
+}
+
+ul,
+ol {
+  padding-left: 0px;
+  text-align: center;
+  list-style: none; /* Optional: removes bullet points */
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Creates two equal columns */
+  gap: 10px; /* Optional: Adds space between the lists */
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+.list {
+  list-style-type: none; /* Removes bullet points */
+  padding: 0;
+}
+.abbreviate {
+  white-space: nowrap; /* Prevents text from wrapping to the next line */
+  overflow: hidden; /* Hides the overflow text */
+  text-overflow: ellipsis; /* Adds '...' at the end of the text */
+}
+.scrollable {
+  max-width: 400px; /* Set the width of the block */
+  height: 375px; /* Set the height of the block */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  overflow-y: auto; /* Enable vertical scrollbar */
+  overflow-wrap: break-word; /* Alternative to word-wrap for better compatibility */
+  scrollbar-color: #58a6ffb0 #48cd9338;
+}
+.single-scrollable {
+  max-width: 800px; /* Set the width of the block */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  overflow-y: auto; /* Enable vertical scrollbar */
+  overflow-wrap: break-word; /* Alternative to word-wrap for better compatibility */
+  margin-left: auto;
+  margin-right: auto;
+  scrollbar-color: #58a6ffb0 #48cd9338;
+}
+/* Navigation bar styling */
+.navbar {
+  overflow: hidden;
+  background-color: transparent; /* black navbar background */
+  padding: 10px;
+}
+
+.navbar li {
+  float: left;
+  justify-content: center;
+  list-style: none;
+}
+
+.navbar li a {
+  border-radius: 50px;
+  display: block;
+  max-height: 20px;
+  text-align: center;
+  padding: 10px 20px;
+  text-decoration: none;
+  width: 160px;
+
+  background-color: #FF8C00; /* dark orange */
+  color: #f9f6f1;             /* bone white text */
+  border: 2px solid #FF8C00;
+  box-shadow: 0px 0px 15px #ff8c004f, 0px 0px 15px #ff8c004f inset;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar li a:hover {
+  background-color: #f9f6f1; /* bone white on hover */
+  color: #000000;            /* black text on hover */
+  border-color: #000000;
+}
+
+
+code {
+  background-color: #242424;
+  border-radius: 6px;
+  color: #d4ffa8;
+  padding: 0.2em 0.4em;
+  font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+}
+
+pre code {
+  padding: 0;
+}
+
+pre {
+  background-color: #242424a5;
+  border-radius: 14px;
+  white-space: pre-wrap; /* CSS3 */
+  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  word-wrap: break-word; /* Internet Explorer 5.5+ */
+  font-size: 16px; /* You can adjust the size as needed */
+  color: #F28500;/* orange text */
+  padding: 8px;
+}
+
+blockquote {
+  background-color: #242424;
+  border-left: 6px solid #30363d;
+  padding-left: 2em;
+  margin-left: 0;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-right: 0.5em;
+  color: #8b949e;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 0px 15px #F28500, 0px 0px 15px #48cd934f inset;
+  border: 2px solid #F28500;
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+}
+
+.link-list {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0;
+  justify-content: center;
+}
+
+.link-list li {
+  border: 0px solid #ccc;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  font-family: 'Lucida Console', 'Lucida Sans Typewriter', Monaco,
+    'Bitstream Vera Sans Mono', monospace;
+  color: #58a6ff;
+
+  white-space: nowrap; /* Prevents text from wrapping to the next line */
+}
+
+.link-list a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.link-list img {
+  width: 100px;
+  height: 200px;
+  border-radius: 50px;
+}
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #58a6ff;
+  background-color: rgba(0, 0, 0, 0.315); /* Optional: Adds a semi-transparent background */
+  padding: 5px;
+  text-align: center;
+}
+
+/*serving list*/
+.serving-areas {
+  text-align: center; /* This centers inline content inside */
+  font-family: sans-serif;
+  padding: 1rem;
+}
+
+.serving-areas ul {
+  display: inline;     /* Inline block to allow centering */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.serving-areas ul li {
+  display: inline;
+  color: white;
+  font-size: 1rem;
+}
+
+.serving-areas ul li::after {
+  content: " • ";
+  color: #F28500;
+  margin: 0 0.3rem;
+}
+
+.serving-areas ul li:last-child::after {
+  content: ""; /* Remove dot after last item */
+}
+
+/*scroll gallarie*/
+.scroll-window {
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+  margin: 0 auto;              /* centers horizontally */
+  border-radius: 10px;
+  background-color: transparent;
+  display: flex;              /* ensures block-level centering */
+  box-shadow: 0px 0px 15px #F28500, 0px 0px 15px #48cd934f inset;
+  border: 2px solid #F28500;
+}
+.scroll-track {
+  display: flex;
+  animation: scroll-left 60s linear infinite;
+}
+.scroll-track img {
+  height: 100%;            /* fills container height */
+  width: 100%;             /* fills container width */
+  object-fit: cover;       /* crops to fill without distortion */
+  margin-right: 10px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  border: none;
+  box-shadow: none;
+}
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-800%); }
+}
+
