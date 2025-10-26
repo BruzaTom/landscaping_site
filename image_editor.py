@@ -1,4 +1,5 @@
 from PIL import Image
+import os
 
 path = 'static/images/texas.webp'
 lst = path.split(".")
@@ -18,6 +19,17 @@ new_height = img_height / 7  # 768 * 1.5 = 1152
 #new_height = 60
 
 uinput = input('option: ')
+if uinput == 'rename':
+    folder_path = 'static/images/landscaping/' 
+    files = os.listdir(folder_path)
+    # Loop and rename
+    for index, filename in enumerate(files):
+        ext = filename.split(".")[1]
+        new_name = f"{str(index+1).zfill(3)}.{ext}"
+        old_path = os.path.join(folder_path, filename)
+        new_path = os.path.join(folder_path, new_name)
+        os.rename(old_path, new_path)
+        print(f"Renamed: {filename} → {new_path}")
 if uinput == 'r':
     # Resize the image
     resized_image = original_image.resize((int(new_width), int(new_height)), Image.Resampling.LANCZOS)

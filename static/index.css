@@ -307,32 +307,58 @@ img {
   text-align: center;
 }
 
+/*gallery*/
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+.gallery img {
+  object-fit: contain;
+  border-radius: 10px;
+  transition: none;
+  box-shadow: none;
+  border: none;
+}
+.pagination {
+  text-align: center;
+  margin-top: 1rem;
+}
+.pagination a {
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #F28500;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+
+
 /*serving list*/
 .serving-areas {
   text-align: center; /* This centers inline content inside */
   font-family: sans-serif;
   padding: 1rem;
 }
-
 .serving-areas ul {
   display: inline;     /* Inline block to allow centering */
   padding: 0;
   margin: 0;
   list-style: none;
 }
-
 .serving-areas ul li {
   display: inline;
   color: white;
   font-size: 1rem;
 }
-
 .serving-areas ul li::after {
   content: " • ";
   color: #F28500;
   margin: 0 0.3rem;
 }
-
 .serving-areas ul li:last-child::after {
   content: ""; /* Remove dot after last item */
 }
