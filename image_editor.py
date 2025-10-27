@@ -1,4 +1,4 @@
-from PIL import Image
+from PIL import Image, ImageOps
 import os
 
 path = 'static/images/texas.webp'
@@ -19,6 +19,23 @@ new_height = img_height / 7  # 768 * 1.5 = 1152
 #new_height = 60
 
 uinput = input('option: ')
+if uinput == 'compress':
+    output_folder = "static/images/car_compressed/"
+    folder_path = 'static/images/carisail/' 
+    files = os.listdir(folder_path)
+    os.makedirs(output_folder, exist_ok=True)
+
+    for filename in os.listdir(folder_path):
+        img_path = os.path.join(folder_path, filename)
+        img = Image.open(img_path)
+        # Save with lower quality
+        output_path = os.path.join(output_folder, filename)
+        img = ImageOps.exif_transpose(img)  # Correct orientation
+        img.save(output_path, format, quality=60, optimize=True)
+        print(f"Compressed: {filename}")
+        print(f"To: {output_path}")
+
+
 if uinput == 'rename':
     folder_path = 'static/images/landscaping/' 
     files = os.listdir(folder_path)
