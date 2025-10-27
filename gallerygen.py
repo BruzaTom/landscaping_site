@@ -23,7 +23,7 @@ for filename in os.listdir(folder):
     if count == 0:
         html = gen_head() 
     if filename.lower().endswith(('.jpg', '.jpeg', '.png', '.gif')):
-        html += f'  <img src="{folder}/{filename}" alt="{filename}">\n'
+        html += f'  <img src="{folder}/{filename}" alt="{filename}" loading="lazy">\n'
     count += 1
 
 
