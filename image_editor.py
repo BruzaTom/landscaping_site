@@ -75,7 +75,7 @@ def index_dir(folder_path):
 def main():
     uinput = input('option: ')
     if uinput == 'compress':
-        comp_dir_files('static/images/carisail/')
+        comp_dir_files('static/images/landscaping/')
     if uinput == 'rename':
         index_dir('static/images/landscaping/')
     if uinput == 'r':

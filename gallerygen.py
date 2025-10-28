@@ -1,6 +1,6 @@
 import os
 
-folder = "static/images/landscaping"
+folder = "static/images/lan_compressed"
 max_images = 6
 page_range = (len(os.listdir(folder)) + max_images - 1) // max_images
 
